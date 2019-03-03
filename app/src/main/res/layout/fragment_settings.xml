@@ -1,0 +1,211 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.orange.lo.assetdemo.activity.SettingsFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/card_margin">
+
+        <android.support.v7.widget.CardView style="@style/card_view">
+
+            <LinearLayout style="@style/card_vertical_layout">
+
+                <LinearLayout style="@style/card_horizontal_layout">
+                    <TextView style="@style/card_title"
+                        android:text="@string/connection_profile" />
+                </LinearLayout>
+
+                <View style="@style/card_item_separator" />
+
+                <LinearLayout style="@style/card_horizontal_layout">
+
+                    <TextView style="@style/card_subitem_title_bold"
+                        android:text="@string/host" />
+
+                    <Spinner style="@style/card_subitem_spinner"
+                        android:id="@+id/mqtt_server_sp" />
+
+                </LinearLayout>
+
+                <LinearLayout style="@style/card_horizontal_layout">
+
+                    <TextView style="@style/card_subitem_title_bold"
+                        android:text="@string/protocol" />
+
+                    <Spinner style="@style/card_subitem_spinner"
+                        android:id="@+id/protocol_sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView style="@style/card_view">
+
+            <LinearLayout style="@style/card_vertical_layout">
+
+                <LinearLayout style="@style/card_horizontal_layout">
+                    <TextView style="@style/card_title"
+                        android:text="@string/credentials" />
+                </LinearLayout>
+
+                <View style="@style/card_item_separator" />
+
+                <TextView style="@style/card_subtitle"
+                    android:text="@string/login_details" />
+
+                <LinearLayout style="@style/card_horizontal_layout">
+
+                    <TextView style="@style/card_subitem_title"
+                        android:text="@string/client_id" />
+
+                    <TextView style="@style/card_subitem_value_primary_dark"
+                        android:id="@+id/clientid_tv"
+                        tools:text="android:00000000" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/card_horizontal_layout">
+
+                    <TextView
+                        style="@style/card_subitem_title"
+                        android:text="@string/username" />
+
+                    <TextView
+                        android:id="@+id/username_tv"
+                        style="@style/card_subitem_value"
+                        tools:text="MQTT username" />
+                </LinearLayout>
+
+                <View style="@style/card_item_separator"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView style="@style/card_subtitle"
+                    android:text="@string/api_key" />
+
+                <LinearLayout style="@style/card_horizontal_layout"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <ImageView style="@style/card_item_image"
+                        android:src="@drawable/ic_key"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView style="@style/card_subitem_value_primary_dark"
+                        android:layout_weight="7"
+                        android:id="@+id/apikey_tv"
+                        tools:text="a fake key here" />
+                </LinearLayout>
+
+                <LinearLayout  style="@style/card_horizontal_layout">
+
+                    <Button style="@style/card_subitem_button"
+                        android:id="@+id/qrcode_apikey_button"
+                        android:drawableLeft="@drawable/ic_qr_code"
+                        android:layout_weight="5"
+                        android:text="@string/scan_qr_code" />
+
+                    <!--<LinearLayout style="@style/card_button_label"-->
+                        <!--android:id="@+id/qrcode_apikey_layout"-->
+                        <!--tools:ignore="UseCompoundDrawables">-->
+
+                        <!--<ImageView style="@style/card_item_image"-->
+                            <!--android:src="@drawable/ic_qr_code"-->
+                            <!--tools:ignore="ContentDescription" />-->
+
+                        <!--<TextView-->
+                        <!--style="@style/card_subitem_title"-->
+                        <!--android:layout_weight="3"-->
+                        <!--android:text="@string/scan_qr_code" />-->
+                    <!--</LinearLayout>-->
+
+                    <Button style="@style/card_subitem_button"
+                        android:id="@+id/manual_apikey_button"
+                        android:drawableLeft="@drawable/ic_mode_edit"
+                        android:text="@string/manual"/>
+                    <!--<LinearLayout style="@style/card_button_label"-->
+                        <!--android:id="@+id/manual_apikey_layout"-->
+                        <!--tools:ignore="UseCompoundDrawables">-->
+
+                        <!--<ImageView style="@style/card_item_image"-->
+                            <!--android:src="@drawable/ic_mode_edit"-->
+                            <!--tools:ignore="ContentDescription" />-->
+
+                        <!--<TextView-->
+                            <!--style="@style/card_subitem_title"-->
+                            <!--android:layout_weight="3"-->
+                            <!--android:text="@string/manual" />-->
+
+
+                    <!--</LinearLayout>-->
+                </LinearLayout>
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView style="@style/card_view">
+
+            <LinearLayout style="@style/card_vertical_layout">
+
+                <LinearLayout style="@style/card_horizontal_layout">
+                    <TextView style="@style/card_title"
+                        android:text="@string/information" />
+                </LinearLayout>
+
+                <View style="@style/card_item_separator" />
+
+                <LinearLayout style="@style/card_horizontal_layout">
+
+                    <TextView
+                        style="@style/card_subitem_title"
+                        android:text="@string/asset_id_imei" />
+
+                    <TextView style="@style/card_subitem_value"
+                        android:id="@+id/assetId_info_tv"
+                        tools:text="an asset id" />
+                </LinearLayout>
+
+
+                <LinearLayout style="@style/card_horizontal_layout">
+
+                    <TextView style="@style/card_subitem_title"
+                        android:text="@string/model" />
+
+                    <TextView style="@style/card_subitem_value"
+                        android:id="@+id/model_info_tv"
+                        tools:text="an asset id" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/card_horizontal_layout">
+
+                    <TextView style="@style/card_subitem_title"
+                        android:text="@string/version" />
+
+                    <TextView style="@style/card_subitem_value"
+                        android:id="@+id/version_info_tv"
+                        tools:text="an asset id" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+        <Button
+            style="@style/button_settings"
+            android:theme="@style/MyButtonAlertStyle"
+            android:text="@string/reset_settings"
+            android:id="@+id/app_settings_btn" />
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,286 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button style="@style/button_settings"
+            android:theme="@style/MyButtonStyle"
+            android:id="@+id/connection_btn"
+            android:text="@string/connection"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.orange.lo.assetdemo.activity.SimulateFragment">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/card_margin">
+
+            <android.support.v7.widget.CardView style="@style/card_view">
+
+                <LinearLayout style="@style/card_vertical_layout">
+
+                    <LinearLayout style="@style/card_horizontal_layout">
+
+                        <TextView
+                            style="@style/card_title"
+                            android:text="@string/configuration" />
+
+                    </LinearLayout>
+
+                    <View style="@style/card_item_separator" />
+
+                    <LinearLayout
+                        style="@style/card_horizontal_layout"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <ImageView
+                            style="@style/card_subitem_telemetry_imageview"
+                            android:contentDescription="@string/configuration"
+                            android:src="@drawable/ic_refresh" />
+
+                        <TextView
+                            android:id="@+id/config_refresh_rate"
+                            style="@style/card_subitem_telemetry_value"
+                            android:layout_weight="7"
+                            android:gravity="left"
+                            android:paddingLeft="10dp"
+                            tools:text="5 second(s)" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
+
+                        <ImageView
+                            android:id="@+id/sending_iv"
+                            style="@style/card_subitem_telemetry_imageview"
+                            android:src="@drawable/ic_trending_up"
+                            android:visibility="invisible" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/card_horizontal_layout"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <ImageView
+                            style="@style/card_subitem_telemetry_imageview"
+                            android:contentDescription="@string/configuration"
+                            android:src="@drawable/ic_description" />
+
+                        <TextView
+                            android:id="@+id/config_log_level"
+                            style="@style/card_subitem_telemetry_value"
+                            android:layout_weight="7"
+                            android:gravity="left"
+                            android:paddingLeft="10dp"
+                            tools:text="Info" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView style="@style/card_view">
+
+                <LinearLayout style="@style/card_vertical_layout">
+
+                    <LinearLayout style="@style/card_horizontal_layout">
+
+                        <TextView
+                            style="@style/card_title"
+                            android:text="@string/telemetry" />
+
+                        <android.support.v7.widget.SwitchCompat
+                            android:id="@+id/telemetry_mode_sw"
+                            style="@style/card_title_switch"
+                            android:textAlignment="gravity"
+                            app:switchPadding="10dp"
+                            app:theme="@style/MySwitchCompat"
+                            android:checked="true"
+                            android:text="@string/auto_on_manual_off"/>
+
+                    </LinearLayout>
+
+                    <View style="@style/card_item_separator" />
+
+                    <LinearLayout style="@style/card_horizontal_layout">
+
+                        <ImageView
+                            style="@style/card_subitem_telemetry_imageview"
+                            android:contentDescription="@string/temperature"
+                            android:src="@drawable/ic_temperature" />
+
+                        <TextView
+                            android:id="@+id/temperature_tv"
+                            style="@style/card_subitem_telemetry_value"
+                            tools:text="-50°" />
+
+                        <SeekBar
+                            android:id="@+id/temperature_sb"
+                            style="@style/card_subitem_telemetry_seekbar"
+                            android:max="140"
+                            android:progress="100" />
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/card_horizontal_layout">
+
+                        <ImageView
+                            style="@style/card_subitem_telemetry_imageview"
+                            android:contentDescription="@string/hydrometry"
+                            android:src="@drawable/ic_hydrometry" />
+
+                        <TextView
+                            android:id="@+id/hydrometry_tv"
+                            style="@style/card_subitem_telemetry_value"
+                            tools:text="100%" />
+
+                        <SeekBar
+                            android:id="@+id/hydrometry_sb"
+                            style="@style/card_subitem_telemetry_seekbar"
+                            android:max="100"
+                            android:progress="90" />
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/card_horizontal_layout">
+
+                        <ImageView
+                            style="@style/card_subitem_telemetry_imageview"
+                            android:contentDescription="@string/revmin"
+                            android:src="@drawable/ic_revmin" />
+
+                        <TextView
+                            android:id="@+id/revmin_tv"
+                            style="@style/card_subitem_telemetry_value"
+                            tools:text="10000 rpm" />
+
+                        <SeekBar
+                            android:id="@+id/revmin_sb"
+                            style="@style/card_subitem_telemetry_seekbar"
+                            android:max="10000"
+                            android:progress="2000" />
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/card_horizontal_layout">
+
+                        <ImageView
+                            style="@style/card_subitem_telemetry_imageview"
+                            android:contentDescription="@string/CO2"
+                            android:src="@drawable/ic_co2" />
+
+                        <TextView
+                            android:id="@+id/CO2_tv"
+                            style="@style/card_subitem_telemetry_value"
+                            tools:text="1000 ppm" />
+
+                        <SeekBar
+                            android:id="@+id/CO2_sb"
+                            style="@style/card_subitem_telemetry_seekbar"
+                            android:max="2000"
+                            android:progress="100" />
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/card_horizontal_layout">
+
+                        <ImageView
+                            style="@style/card_subitem_telemetry_imageview"
+                            android:contentDescription="@string/pressure"
+                            android:src="@drawable/ic_pressure" />
+
+                        <TextView
+                            android:id="@+id/pressure_tv"
+                            style="@style/card_subitem_telemetry_value"
+                            tools:text="1000 ppm" />
+
+                        <SeekBar
+                            android:id="@+id/pressure_sb"
+                            style="@style/card_subitem_telemetry_seekbar"
+                            android:max="4000"
+                            android:progress="100" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView style="@style/card_view">
+
+                <LinearLayout style="@style/card_vertical_layout">
+
+                    <LinearLayout style="@style/card_horizontal_layout">
+
+                        <TextView
+                            style="@style/card_title"
+                            android:text="@string/location" />
+
+                        <android.support.v7.widget.SwitchCompat
+                            android:id="@+id/location_mode_sw"
+                            style="@style/card_title_switch"
+                            app:switchPadding="10dp"
+                            app:theme="@style/MySwitchCompat"
+                            android:checked="true"
+                            android:text="@string/auto_on_manual_off" />
+
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/card_horizontal_layout">
+
+                        <TextView
+                            style="@style/card_title"
+                            android:text="@string/door" />
+
+                        <android.support.v7.widget.SwitchCompat
+                            android:id="@+id/door_state_sw"
+                            style="@style/card_title_switch"
+                            app:switchPadding="10dp"
+                            app:theme="@style/MySwitchCompat"
+                            android:checked="false"
+                            android:text="@string/door_on_off" />
+
+                    </LinearLayout>
+
+                    <View style="@style/card_item_separator" />
+
+                    <LinearLayout
+                        style="@style/card_horizontal_layout"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <ImageView
+                            style="@style/card_subitem_telemetry_imageview"
+                            android:contentDescription="@string/location"
+                            android:src="@drawable/ic_location" />
+
+                        <TextView
+                            android:id="@+id/location_tv"
+                            style="@style/card_subitem_telemetry_value"
+                            android:layout_weight="5"
+                            tools:text="-180.000000 / -90.000000" />
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

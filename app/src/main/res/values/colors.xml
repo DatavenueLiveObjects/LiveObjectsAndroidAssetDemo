@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Out of the box colors -->
+    <color name="colorPrimary">#000</color>
+<!--    <color name="colorPrimaryDark">#00b3ff</color>  -->
+<!--    <color name="colorPrimaryBlue">#01a6ed</color>  -->
+    <color name="colorPrimaryDark">#f26722</color>
+    <color name="colorPrimaryBlue">#f26722</color>
+    <color name="colorAccent">#f26722</color>
+
+
+    <!-- Custom Colors -->
+    <!-- Basic colors -->
+    <color name="white">#ffff</color>
+    <color name="red">#f44336</color>
+    <color name="black">#000000</color>
+    <color name="dark_grey">#aaa</color>
+    <color name="light_grey">#ccc</color>
+
+    <color name="item_pressed">@color/dark_grey</color>
+    <color name="item_selected">@color/light_grey</color>
+    <color name="item_active">@color/colorPrimaryDark</color>
+    <color name="translucent">#00ffffff</color>
+
+    <color name="card_background">#ffffff</color>
+    <color name="card_stroke">#999</color>
+
+</resources>

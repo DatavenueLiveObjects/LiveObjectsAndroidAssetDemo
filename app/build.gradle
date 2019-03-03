@@ -1,0 +1,110 @@
+apply plugin: 'com.android.application'
+
+ext {
+    supportLibVersion = '28.0.+'
+}
+
+android {
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+
+    signingConfigs {
+        config_release {
+            keyAlias 'ReleaseSignatureApk'
+            keyPassword 'xxxxx'
+            storeFile file('./apk_release_signature.jks')
+            storePassword 'yyyyyy'
+        }
+    }
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
+    defaultConfig {
+        applicationId "com.orange.lo.assetdemo"
+        minSdkVersion 23 // Required for try () / catch
+        targetSdkVersion 28
+
+        versionCode 13
+        versionName "2.1.13"
+
+        setProperty("archivesBaseName", "lo-asset-demo-$versionName")
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    // Specifies two flavor dimensions.
+    flavorDimensions "env", "id"
+
+    productFlavors {
+
+        primary {
+            dimension "id"
+            applicationIdSuffix '.primary'
+            resValue 'string', 'app_name', "Live Objects Asset Primary"
+            buildConfigField 'String', 'ASSET_ID_SUFFIX', '"PRIMARY"'
+        }
+        primaryForPublish {
+            dimension "id"
+//            applicationIdSuffix '.primary'
+            resValue 'string', 'app_name', "Live Objects Asset"
+            buildConfigField 'String', 'ASSET_ID_SUFFIX', '"PRIMARY"'
+        }
+        secondary {
+            dimension "id"
+            applicationIdSuffix '.secondary'
+            resValue 'string', 'app_name', "Live Objects Asset Secondary"
+            buildConfigField 'String', 'ASSET_ID_SUFFIX', '"SECONDARY"'
+        }
+        production {
+            dimension "env"
+            buildConfigField 'String', 'MQTT_SERVER', '"liveobjects.orange-business.com"'
+            buildConfigField 'String', 'CA_CERT_SSL', '"ca_cert_orange_sa.crt"'
+            buildConfigField 'String', 'CA_CERT_WSS', '"ca_cert_orange_sa_symantec_verisign.crt"'
+        }
+    }
+
+    buildTypes {
+        debug {
+            // Allow to install debug and release versions on same device
+            applicationIdSuffix '.debug'
+            versionNameSuffix '-DEBUG'
+        }
+
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config_release
+        }
+    }
+}
+
+repositories {
+    mavenCentral()
+    maven { url "https://repo.eclipse.org/content/repositories/paho-snapshots/" }
+    maven { url "https://repo.eclipse.org/content/repositories/paho-releases/" }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "com.android.support:appcompat-v7:${project.ext.supportLibVersion}"
+    implementation "com.android.support:support-v4:${project.ext.supportLibVersion}"
+    implementation "com.android.support:support-v13:${project.ext.supportLibVersion}"
+    implementation "com.android.support:design:${project.ext.supportLibVersion}"
+    implementation "com.android.support:cardview-v7:${project.ext.supportLibVersion}"
+    implementation 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.1.0'
+    implementation 'org.eclipse.paho:org.eclipse.paho.android.service:1.1.1'
+    implementation 'com.google.code.gson:gson:2.6.2'
+    /* This dependency allows to use QR Scan in portrait mode without Third party application */
+    implementation 'com.journeyapps:zxing-android-embedded:3.4.+'
+    //    provided 'org.projectlombok:lombok:1.16.+'
+    compileOnly 'org.projectlombok:lombok:1.16.20'
+    annotationProcessor 'org.projectlombok:lombok:1.16.20'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+}

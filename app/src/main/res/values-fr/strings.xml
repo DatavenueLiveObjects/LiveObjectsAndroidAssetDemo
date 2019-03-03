@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="action_settings">Paramètres</string>
+    <string name="client_connected">Client connecté avec succès</string>
+
+    <string name="api_key">Clef d\'API</string>
+    <string name="api_key_empty">Pas de clef d\'API</string>
+    <string name="credentials">Droits d\'Accès</string>
+    <string name="scan_qr_code">Scanner QR Code</string>
+    <string name="client_id">Id Client</string>
+    <string name="login_details">Détails de Login</string>
+    <string name="username">Nom Utilisateur</string>
+    <string name="asset_id_imei">Id Asset (IMEI)</string>
+    <string name="information">Information</string>
+    <string name="model">Modèle</string>
+    <string name="version">Version App</string>
+    <string name="connection">Connecter</string>
+    <string name="host">Serveur</string>
+    <string name="protocol">Protocole</string>
+    <string name="reset_settings">Réinit Paramètres de l\'App</string>
+    <string name="router_mode">Mode Router (ON / OFF)</string>
+    <string name="manual">Manuel</string>
+    <string name="qr_activity">Scan de la Clef d\'API</string>
+    <string name="scan_cancelled">Le Scan a été annulé</string>
+    <string name="api_key_scanned">Clef d\'Api Key Scannée:&#032;</string>
+    <string name="please_insert_api_key">Merci de saisir la Clef d\'API</string>
+    <string name="disconnection">Déconnecter</string>
+    <string name="connecting">Connexion</string>
+    <string name="disconnecting">Déconnection</string>
+    <string name="telemetry">Télémétrie</string>
+    <string name="temperature">Température</string>
+    <string name="hydrometry">Hydrométrie</string>
+    <string name="revmin">Tours / min</string>
+    <string name="CO2">CO2</string>
+    <string name="pressure">Pression</string>
+    <string name="auto_on_manual_off">Auto</string>
+    <string name="door_on_off">ouvert/fermé</string>
+    <string name="no_location_permissions">Pas de permissions pour accèder au GPS ou localisation NETWORK !</string>
+    <string name="location">Localisation</string>
+    <string name="door">Porte</string>
+    <string name="connection_error">Erreur lors de la connection au Serveur MQTT</string>
+    <string name="publish_error">Impossible de publier : &#032;</string>
+    <string name="no_network_no_gps">Pas de Réseau ou GPS actif pour avoir une localisation valide</string>
+    <string name="subscribe_error">Impossible de souscrire au topic :</string>
+    <string name="unsubscribe_error">Impossible de désouscrire au topic  :</string>
+    <string name="configuration">Configuration</string>
+    <string name="device_config_refresh">Rafraichissement : %1$d second(s)</string>
+    <string name="device_config_log">Niveau de log : %1$s </string>
+    <string name="asset_command_buzzer_received">Commande Buzzer Reçue</string>
+    <string name="asset_command_open_door_received">Commande Open door reçue</string>
+    <string name="asset_command_close_door_received">Commande Close door reçue</string>
+    <string name="asset_command_reset_received">Commande reset valeurs télémétrie</string>
+    <string name="simulate">Simuler</string>
+    <string name="settings">Paramètres</string>
+    <string name="resources">Ressources</string>
+    <string name="log">Log</string>
+    <string name="splash_screen">Ecran d\'Accueil (firmware = xxx.png &lt; 15Kb)</string>
+    <string name="new_version_found">Nouvelle version disponible : %1$s</string>
+    <string name="update">MàJ</string>
+    <string name="asset_new_resource_available">Nouvelle ressource disponible pour téléchargement</string>
+    <string name="download_resource_error">Erreur lors du téléchargement de la ressource: %1$s</string>
+    <string name="downloading">Téléchargement…</string>
+    <string name="connection_profile">Profil de Connection</string>
+    <string name="alert">Attention</string>
+    <string name="no_permission_error">Désolé mais les permissions sont obligatoires pour démarrer l\'app!</string>
+    <string name="ok">OK</string>
+
+</resources>

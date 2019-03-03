@@ -1,0 +1,94 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.orange.lo.assetdemo.activity.ResourcesFragment">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/card_margin">
+
+        <android.support.v7.widget.CardView style="@style/card_view">
+
+            <LinearLayout style="@style/card_vertical_layout">
+
+                <LinearLayout style="@style/card_horizontal_layout">
+
+                    <TextView
+                        style="@style/card_title"
+                        android:layout_width="wrap_content"
+                        android:layout_margin="0dp"
+                        android:layout_marginRight="0dp"
+                        android:padding="0dp"
+                        android:paddingStart="0dp"
+                        android:paddingLeft="0dp"
+                        android:paddingTop="0dp"
+                        android:paddingEnd="0dp"
+                        android:paddingRight="0dp"
+                        android:paddingBottom="0dp"
+                        android:text="@string/splash_screen" />
+
+                    <TextView
+                        android:id="@+id/splash_screen_version_tv"
+                        style="@style/card_title_right"
+                        android:layout_width="wrap_content"
+                        tools:text="v1.0" />
+                </LinearLayout>
+
+                <View style="@style/card_item_separator" />
+
+                <FrameLayout android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:padding="@dimen/card_padding">
+                    <ImageView
+                        android:id="@+id/splash_screen_iv"
+                        android:src="@drawable/lo_frame_eng"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitCenter"/>
+
+                </FrameLayout>
+
+                <LinearLayout android:id="@+id/new_splash_visible"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:visibility="visible">
+
+                    <View style="@style/card_item_separator" />
+
+                    <LinearLayout style="@style/card_horizontal_layout"
+                        android:paddingBottom="0dp"
+                        android:paddingTop="0dp">
+
+                        <TextView android:id="@+id/splash_screen_new_version_tv"
+                            style="@style/card_footer_title_bold"
+                            tools:text="This is a very long very available, it will be wrapped"
+                            android:layout_weight="5"
+                            android:text="@string/new_version_found" />
+
+
+                        <Button android:theme="@style/MyButtonStyle"
+                            android:id="@+id/resource_download_bt"
+                            android:layout_width="0dp"
+                            android:layout_weight="3"
+                            android:layout_height="wrap_content"
+                            android:text="@string/update" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+</ScrollView>
+
