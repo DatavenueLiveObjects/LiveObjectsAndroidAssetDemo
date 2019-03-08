@@ -1,3 +1,7 @@
+/**
+ *
+ */
+
 package com.orange.lo.assetdemo.activity;
 
 import android.Manifest;
