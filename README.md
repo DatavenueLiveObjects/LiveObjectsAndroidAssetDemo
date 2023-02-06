@@ -1,7 +1,7 @@
 # LiveObjectsAndroidAssetDemo
 This is the code of the Live Objects Android MQTT simulator
 
-Find the simulator itself on Google play at [LO Asset](https://play.google.com/store/apps/details?id=com.orange.lo.assetdemo)
+Download the simulator itself at [LO Asset](https://github.com/DatavenueLiveObjects/LiveObjectsAndroidAssetDemo/blob/master/lo-asset-demo-2.1.14-production-primaryForPublish-release.apk)
 
 To get a 1 year free Live Objects account go on [Live Objects](https://liveobjects.orange-business.com) and Sign up !
 
